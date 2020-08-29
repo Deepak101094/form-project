@@ -1,13 +1,9 @@
 import React from "react";
 //?component Routes import
-import Router from "./components/Routes";
+import Routes from "./Routes/index";
 
 function App() {
-  return (
-    <div>
-      <Router />
-    </div>
-  );
+  return <div></div>;
 }
 
 export default App;

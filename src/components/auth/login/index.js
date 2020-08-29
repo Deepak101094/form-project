@@ -1,14 +1,15 @@
 import React from "react";
+import "../style.scss";
 //?library import
 import { Link, useHistory } from "react-router-dom";
+//? component import
 
 const Login = () => {
   //this will give us history object
   const history = useHistory();
   return (
-    <div>
-      <>
-        <div className="accountbg"></div>
+    <>
+      <div className="accountbg">
         <div className="wrapper-page">
           <div className="card">
             <div className="card-body">
@@ -48,12 +49,29 @@ const Login = () => {
                       placeholder="Enter password"
                     />
                   </div>
+                  {/* */}
 
                   <div className="form-group row m-t-20">
-                    <div className="col-12 text-right">
+                    <div className="col-sm-6">
+                      <div className="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          className="custom-control-input"
+                          id="customControlInline"
+                        />
+                        <label
+                          className="custom-control-label"
+                          for="customControlInline"
+                        >
+                          Remember me
+                        </label>
+                      </div>
+                    </div>
+                    <div className="col-sm-6 text-right">
                       <button
-                        className="btn btn-primary w-md waves-effect waves-light"
+                        className="btn btn-warning w-md waves-effect waves-light"
                         type="submit"
+                        onClick={() => history.push("/user_registration")}
                       >
                         Sign In
                       </button>
@@ -63,8 +81,7 @@ const Login = () => {
                   <div className="form-group m-t-10 mb-0 row">
                     <div className="col-12 m-t-20">
                       <p className="font-14 text-muted mb-0">
-                        By registering you agree to the Admiria{" "}
-                        {/*<Link to="#">Terms of Use</Link> */}
+                        <Link to="#">Forgot Your Password?</Link>
                       </p>
                     </div>
                   </div>
@@ -82,7 +99,7 @@ const Login = () => {
                 className="font-500 font-14 text-white font-secondary"
               >
                 {" "}
-                SignUp{" "}
+                Sign Up now!{" "}
               </Link>{" "}
             </p>
             <p className="text-white">
@@ -91,8 +108,8 @@ const Login = () => {
             </p>
           </div>
         </div>
-      </>
-    </div>
+      </div>
+    </>
   );
 };
 

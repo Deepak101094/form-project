@@ -1,11 +1,12 @@
 import React from "react";
-import "../style.scss";
+import "./style.scss";
 //? library import
 import { Link, useHistory } from "react-router-dom";
 
-const UserRegistration = () => {
+const Signup = () => {
   //this will give us history object
   const history = useHistory();
+
   return (
     <>
       <div className="accountbg"></div>
@@ -13,76 +14,39 @@ const UserRegistration = () => {
         <div className="card">
           <div className="card-body">
             {/* <h3 className="text-center m-0">
-            <Link
-              to="/"
-              onClick={() => this.props.UpdateLoginAgain()}
-              className="logo logo-admin"
-            >
-              <img src="assets/images/logo.png" height="30" alt="logo" />
-            </Link>
-          </h3> */}
+              <Link
+                to="/"
+                onClick={() => this.props.UpdateLoginAgain()}
+                className="logo logo-admin"
+              >
+                <img src="assets/images/logo.png" height="30" alt="logo" />
+              </Link>
+            </h3> */}
 
             <div className="p-2">
-              <h5 className="font-18 m-b-2 text-center">
-                {" "}
-                Enterprise User Registration
-              </h5>
+              <h5 className="font-18 m-b-2 text-center"> Register</h5>
               <p className="text-muted text-center">
-                Please fill up all fields to continue to SkillsKhoj.
+                Sign up to continue to SkillsKhoj.
               </p>
 
               <form className="form-horizontal m-t-40" action="index.html">
                 <div className="form-group">
-                  <label for="companyname">Company Name</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="companyname"
-                    placeholder="Enter Company Name"
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label for="projectname">
-                    Project / Regional Office Name
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="projectname"
-                    placeholder="Enter Company Name"
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label for="spocname">
-                    SPOC Name ( Single Point Of Contact for company )
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="spocname"
-                    placeholder="Enter SPOC Name"
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label for="sponcontact">SPOC Contact Number</label>
-                  <input
-                    type="number"
-                    className="form-control"
-                    id="sponcontact"
-                    placeholder="Enter SPOC Contact Number"
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label for="spocmailId">SPOC Mail ID</label>
+                  <label for="useremail">Email</label>
                   <input
                     type="email"
                     className="form-control"
-                    id="spocmailId"
-                    placeholder="Enter SPOC Mail ID"
+                    id="useremail"
+                    placeholder="Enter email"
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label for="username">Username</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="username"
+                    placeholder="Enter username"
                   />
                 </div>
 
@@ -101,9 +65,9 @@ const UserRegistration = () => {
                     <button
                       className="btn btn-warning w-md waves-effect waves-light"
                       type="submit"
-                      onClick={() => history.push("/user_otp_page")}
+                      onClick={() => history.push("/")}
                     >
-                      Next
+                      Register
                     </button>
                   </div>
                 </div>
@@ -125,12 +89,12 @@ const UserRegistration = () => {
           <p className="text-white">
             Already have an account ?{" "}
             {/*  <Link
-            to="pages_login"
-            className="font-500 font-14 text-white font-secondary"
-          >
-            {" "}
-            Login{" "}
-          </Link>{" "}*/}
+              to="pages_login"
+              className="font-500 font-14 text-white font-secondary"
+            >
+              {" "}
+              Login{" "}
+            </Link>{" "}*/}
           </p>
           <p className="text-white">
             © {new Date().getFullYear()} SkillsKhoj. All Rights Reserved.{" "}
@@ -142,4 +106,4 @@ const UserRegistration = () => {
   );
 };
 
-export default UserRegistration;
+export default Signup;

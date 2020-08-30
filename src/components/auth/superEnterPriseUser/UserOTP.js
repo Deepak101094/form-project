@@ -1,5 +1,5 @@
 import React from "react";
-import "../style.scss";
+import "./style.scss";
 //?library import
 import { Link, useHistory } from "react-router-dom";
 //? component import
@@ -47,9 +47,9 @@ const UserOtp = () => {
                       <button
                         className="btn btn-warning w-md waves-effect waves-light"
                         type="submit"
-                        onClick={() => history.push("/user_registration")}
+                        onClick={() => history.push("/user_detail")}
                       >
-                        Sign In
+                        Next
                       </button>
                     </div>
                   </div>

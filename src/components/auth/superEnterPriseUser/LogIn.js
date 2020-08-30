@@ -1,5 +1,5 @@
 import React from "react";
-import "../style.scss";
+import "./style.scss";
 //?library import
 import { Link, useHistory } from "react-router-dom";
 //? component import
